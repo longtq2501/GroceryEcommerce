@@ -1,0 +1,30 @@
+.button {
+  display: flex;
+  padding: 1.2rem 2.4rem;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 1rem;
+  gap: 1rem;
+  cursor: pointer;
+
+  min-width: 31.5rem;
+  max-width: 100%;
+  background: #ffb700;
+
+  color: #1a162e;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Medium 18 */
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+
+  &--secondary {
+    background: #fff;
+    border: 1px solid #d2d1d6;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
