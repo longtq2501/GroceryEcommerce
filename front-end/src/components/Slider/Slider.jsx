@@ -18,7 +18,7 @@ const Slider = () => {
   return (
     <SliderContainer>
       {Object.values(listSlider).map((item, index) => (
-        <picture className="w-full object-cover">
+        <picture className="w-full object-cover" key={index}>
           <source media="(min-width: 1024px)" srcSet={item.imageBig} />
           <img
             key={index}
