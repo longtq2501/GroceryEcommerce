@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import FilterButton from "../Filter/FilterButton";
+
 const CategoryContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,16 +18,17 @@ const CategoryTitleContainer = styled.div`
 
 const CategoryTitle = styled.h1`
   color: #1a162e;
-  font-size: 2.4rem;
   font-weight: 700;
-  line-height: 141.667%;
 `;
 
 const Category = (props) => {
   return (
     <CategoryContainer>
       <CategoryTitleContainer>
-        <CategoryTitle>{props.title}</CategoryTitle>
+        <CategoryTitle className="text-[22px] lg:text-[24px] leading-[145.455%] lg:leading-[141.667%]">
+          {props.title}
+        </CategoryTitle>
+        {props.addFilter ? <FilterButton /> : null}
       </CategoryTitleContainer>
       {props.children}
     </CategoryContainer>

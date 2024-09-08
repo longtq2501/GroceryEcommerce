@@ -14,6 +14,7 @@ const HomeContainer = styled.div`
   flex-direction: column;
   gap: 3rem;
   max-width: 1280px;
+  margin-bottom: 3rem;
 `;
 
 const Home = () => {
@@ -30,7 +31,7 @@ const Home = () => {
           </CategoryItemContainer>
         </Category>
         {/* category product */}
-        <Category title="Total LavAzza 1320">
+        <Category title="Total LavAzza 1320" addFilter>
           <ProductContainer>
             <Product />
           </ProductContainer>

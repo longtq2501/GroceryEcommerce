@@ -7,14 +7,13 @@
   gap: 1rem;
   cursor: pointer;
 
-  min-width: 31.5rem;
-  max-width: 100%;
+  // min-width: 31.5rem;
+  // max-width: 100%;
   background: #ffb700;
 
   color: #1a162e;
   text-align: center;
   font-feature-settings: "liga" off, "clig" off;
-  /* Medium 18 */
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
@@ -26,5 +25,18 @@
 
   &:active {
     opacity: 0.7;
+  }
+
+  &--filter {
+    width: fit-content;
+    border-radius: 0.6rem;
+  }
+
+  &--filter-cancel {
+    color: #9e9da8;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 146.667%;
+    background: #fff;
   }
 }
