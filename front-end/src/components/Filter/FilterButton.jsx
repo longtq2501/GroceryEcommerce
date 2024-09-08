@@ -4,7 +4,6 @@ import FilterIcon from "../../assets/filter/filter-icon.svg";
 import FilterTable from "./FilterTable";
 
 const FilterButtonContainer = styled.div`
-  position: relative;
   display: flex;
   gap: 1.4rem;
   padding: 0.6rem 1.2rem;
@@ -32,11 +31,13 @@ const FilterButton = () => {
   };
 
   return (
-    <FilterButtonContainer onClick={handleClick}>
-      <FilterButtonTitle>Filter</FilterButtonTitle>
-      <img src={FilterIcon} alt="filter-icon" />
+    <div className="relative">
+      <FilterButtonContainer onClick={handleClick}>
+        <FilterButtonTitle>Filter</FilterButtonTitle>
+        <img src={FilterIcon} alt="filter-icon" />
+      </FilterButtonContainer>
       {active && <FilterTable />}
-    </FilterButtonContainer>
+    </div>
   );
 };
 
