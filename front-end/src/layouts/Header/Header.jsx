@@ -7,7 +7,7 @@ import ShoppingIcon from "../../assets/header/shopping-icon.svg";
 import Avatar from "../../assets/header/avatar.jpg";
 import MenuIcon from "../../assets/header/menu-icon.svg";
 import styled from "styled-components";
-import NavBar from "../../components/NavBar/NavBar";
+import NavTable from "../../components/NavBar/NavTable";
 import ArrowDownIcon from "../../assets/header/arrow-down-icon.svg";
 
 const AvatarHeader = styled.button`
@@ -114,7 +114,7 @@ const Header = () => {
         <button className="lg:hidden cursor-pointer relative">
           <img src={MenuIcon} alt="menu-icon" onClick={toggleMenu} />
         </button>
-        <NavBar isOpenMenu={isOpenMenu} />
+        <NavTable isOpenMenu={isOpenMenu} />
         <Logo />
         <NavContainer className="hidden lg:flex">
           {listNav.map((item, index) => (
