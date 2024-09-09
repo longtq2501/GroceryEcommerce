@@ -7,13 +7,13 @@ import Button from "../../components/Button/Button.jsx";
 const FilterContainer = styled.div`
   position: absolute;
   top: 56px;
-  left: -216px;
+  /* left: -216px; */
   z-index: 100;
   /* width: 31.2rem; */
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem;
+  /* padding: 2rem; */
   background: #fff;
   box-shadow: 0px 40px 90px rgba(200, 200, 200, 0.4);
   border-radius: 2rem;
@@ -29,7 +29,6 @@ const FilterTitle = styled.h3`
 
 const FilterForm = styled.form`
   display: flex;
-  flex-direction: column;
   gap: 2rem;
 `;
 
@@ -67,6 +66,7 @@ const FilterFormSelect = styled.select`
   height: inherit;
   border-bottom: inherit;
   border-top: inherit;
+  outline: none;
 `;
 
 const FilterInputText = styled.input`
@@ -124,9 +124,9 @@ const FilterTable = () => {
   const listBrand = ["Lavazza", "Nescafe", "Starbucks"];
 
   return (
-    <FilterContainer>
+    <FilterContainer className="p-[20px] md:p-[40px] left-[-216px] md:left-[-257px] lg:left-[-866px]">
       <FilterTitle>Filter</FilterTitle>
-      <FilterForm>
+      <FilterForm className="flex-col lg:flex-row">
         <FilterFormItem>
           <FilterTitle>Price</FilterTitle>
           <div className="flex flex-row gap-[30px]">
@@ -187,12 +187,11 @@ const FilterTable = () => {
             ))}
           </FilterTagContainer>
         </FilterFormItem>
-
-        <div className="flex flex-row justify-end">
-          <Button className="button--filter-cancel">Cancel</Button>
-          <Button className="button--filter">Show Result</Button>
-        </div>
       </FilterForm>
+      <div className="flex flex-row justify-end">
+        <Button className="button--filter-cancel">Cancel</Button>
+        <Button className="button--filter">Show Result</Button>
+      </div>
     </FilterContainer>
   );
 };
