@@ -74,23 +74,23 @@ const FilterTagText = styled.span`
 `;
 
 const ProductShowWrapper = styled.section`
-  display: flex;
+  display: grid;
   border-radius: 2rem;
   background: #fff;
   box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
 `;
 
 const ProductShowImage = styled.div`
+  display: flex;
+  justify-content: center;
   min-width: 30.3rem;
-  max-width: 100%;
+  width: 100%;
 `;
 
 const ProductShowTitle = styled.h3`
   color: #1a162e;
   font-feature-settings: "liga" off, "clig" off;
-  font-size: 1.8rem;
   font-weight: 700;
-  line-height: 144.444%;
 `;
 
 const ProductShowRate = styled.span`
@@ -160,18 +160,22 @@ const ProductShow = () => {
   ];
 
   return (
-    <ProductShowWrapper className="mx-[20px] p-[16px] flex-col gap-[16px] items-center">
+    <ProductShowWrapper className="max-w-[1280px] lg:mx-auto mx-[20px] p-[16px] lg:grid-cols-3 gap-[16px] items-center sm:p-[30px] lg:p-[0px] lg:flex-row lg:gap-[30px]">
       <ProductShowImage>
-        <img src={Image1} alt="image-1" className="object-cover" />
+        <img
+          src={Image1}
+          alt="image-1"
+          className="object-cover lg:col-span-1"
+        />
       </ProductShowImage>
       {/*  */}
-      <article className="flex flex-col gap-[16px]">
-        <ProductShowTitle>
+      <article className="flex flex-col gap-[16px] w-full lg:bg-[#F6F6F6] lg:p-[60px] lg:col-span-2">
+        <ProductShowTitle className="text-[18px] lg:text-[26px] leading-[144.444%] lg:leading-[138.462%]">
           Coffee Beans - Espresso Arabica and Robusta Beans
         </ProductShowTitle>
         {/*  */}
-        <div className="flex flex-col gap-[27px]">
-          <FilterFormItem>
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-[27px]">
+          <FilterFormItem className="sm:col-span-2">
             <div className="flex flex-row gap-[16px] items-center mb-[10px]">
               <img src={Star} alt="star" />
               <ProductShowRate>(3.5) 1100 reviews</ProductShowRate>
@@ -195,7 +199,7 @@ const ProductShow = () => {
             </FilterTagContainer>
           </FilterFormItem>
           {/*  */}
-          <div className="flex flex-col gap-[27px]">
+          <div className="flex flex-col gap-[27px] sm:col-span-2">
             {listAction.map((item, index) => (
               <div key={index} className="flex flex-row gap-[20px]">
                 <img src={item.icon} />
@@ -204,7 +208,7 @@ const ProductShow = () => {
             ))}
           </div>
           {/*  */}
-          <ProductShowCard className="p-[20px] ">
+          <ProductShowCard className="p-[20px] sm:col-span-4">
             <div className="flex flex-row gap-[10px] items-center">
               <ProductShowCardSubPrice>$500.00</ProductShowCardSubPrice>
               <ProductShowCardDiscountContainer>

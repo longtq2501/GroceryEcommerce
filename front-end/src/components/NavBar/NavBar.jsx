@@ -29,7 +29,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="p-[20px] rounded-[20px] bg-[#fff] lg:bg-[#F6F6F6] flex flex-row flex-wrap mx-[20px] gap-[16px] lg:gap-[20px]">
+    <div className="max-w-[1280px] lg:w-full lg:mx-auto p-[20px] rounded-[20px] bg-[#fff] lg:bg-[#F6F6F6] flex flex-row flex-wrap mx-[20px] gap-[16px] lg:gap-[20px]">
       {listNav.map((item, index) => (
         <div key={index} className="flex flex-row gap-[8px] items-center">
           {index === listNav.length - 1 ? (
