@@ -117,9 +117,10 @@ const NavigationSignUpLink = styled.a`
   cursor: pointer;
 `;
 
-const Login = () => {
+const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
   const AuthenticateRequest = {
@@ -135,6 +136,10 @@ const Login = () => {
 
   const handlePassword = (event) => {
     setPassword(event.target.value);
+  };
+
+  const handleConfirmPassword = (event) => {
+    setConfirmPassword(event.target.value);
   };
 
   const handleLogin = async (event) => {
@@ -167,10 +172,9 @@ const Login = () => {
 
         <form onSubmit={handleLogin} className="lg:w-[460px]">
           <div className="flex flex-col gap-[10px] mb-[30px]">
-            <FormTitle>Sign In</FormTitle>
+            <FormTitle>Sign Up</FormTitle>
             <FormDesc>
-              Welcome back to sign in. As a returning customer, you have access
-              to your previously saved all information.
+              Let’s create your account and Shop like a pro and save money.
             </FormDesc>
           </div>
 
@@ -190,6 +194,15 @@ const Login = () => {
                 placeholder="Password"
                 onChange={handlePassword}
                 value={password}
+              />
+              <InputItemIcon alt="icon-password" src={iconPassword} />
+            </InputItemContainer>
+            <InputItemContainer>
+              <InputItem
+                type="confirmPassword"
+                placeholder="Confirm Password"
+                onChange={handleConfirmPassword}
+                value={confirmPassword}
               />
               <InputItemIcon alt="icon-password" src={iconPassword} />
             </InputItemContainer>
@@ -220,14 +233,12 @@ const Login = () => {
         </form>
 
         <div className="flex flex-row gap-[10px] items-center">
-          <NavigationSignUpText>
-            Don’t have an account yet?
-          </NavigationSignUpText>
+          <NavigationSignUpText>You have an account yet?</NavigationSignUpText>
           <Link
-            to={"/register"}
+            to={"/login"}
             className="text-[18px] leading-[144.444%] cursor-pointer font-[500] text-[#0071dc]"
           >
-            Sign Up
+            Sign In
           </Link>
         </div>
       </FormContainer>
@@ -235,4 +246,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
