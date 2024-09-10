@@ -66,10 +66,10 @@ const ProductHeartContainer = styled.div`
 `;
 
 const Product = () => {
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(-1);
 
-  const handleClick = (e) => {
-    setClicked(clicked => !clicked);
+  const handleClick = (index) => {
+    setClicked(clicked === index ? -1 : index);
   };
 
   const listProduct = [
@@ -105,17 +105,16 @@ const Product = () => {
 
   return Object.values(listProduct).map((item, index) => (
     <ProductContainer key={index}>
-      <ProductHeartContainer onClick={handleClick}>
+      <ProductHeartContainer onClick={() => handleClick(index)}>
         <img
           src={HeartIcon}
           alt="heart-icon"
-          className={`${!clicked ? "block" : "hidden"}`}
+          className={`block ${clicked === index ? "hidden" : "block"}`}
         />
         <img
           src={HeartLikedIcon}
           alt="heart-liked-icon"
-          className={`absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-37%] 
-            ${clicked ? "block" : "hidden"}`}
+          className={`mt-[12px] ${clicked === index ? "block" : "hidden"}`}
         />
       </ProductHeartContainer>
       <ProductImage src={item.image} alt="" />
