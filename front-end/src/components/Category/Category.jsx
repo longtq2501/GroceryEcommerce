@@ -7,7 +7,6 @@ const CategoryContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin: 0 20px;
 `;
 
 const CategoryTitleContainer = styled.div`
@@ -23,7 +22,7 @@ const CategoryTitle = styled.h1`
 
 const Category = (props) => {
   return (
-    <CategoryContainer>
+    <CategoryContainer className="mx-[20px] lg:mx-auto lg:px-[25px] xl:px-[0px]">
       <CategoryTitleContainer>
         <CategoryTitle className="text-[22px] lg:text-[24px] leading-[145.455%] lg:leading-[141.667%]">
           {props.title}

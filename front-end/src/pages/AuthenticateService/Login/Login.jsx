@@ -162,7 +162,7 @@ const Login = () => {
       <FormContainer className="lg:flex-1 lg:justify-center lg:ml-[60px] lg:mr-[42.5px]">
         <div className="flex flex-row items-center justify-between gap-[14px]">
           <img src={iconLogo} alt="logo" />
-          <LogoText href="/">grocerymart</LogoText>
+          <LogoText href="/home">grocerymart</LogoText>
         </div>
 
         <form onSubmit={handleLogin} className="lg:w-[460px]">
