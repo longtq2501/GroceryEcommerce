@@ -160,7 +160,7 @@ const ProductShow = () => {
   ];
 
   return (
-    <ProductShowWrapper className="max-w-[1280px] lg:mx-auto mx-[20px] p-[16px] lg:grid-cols-3 gap-[16px] items-center sm:p-[30px] lg:p-[0px] lg:flex-row lg:gap-[30px]">
+    <ProductShowWrapper className="max-w-[1280px] lg:mx-auto mx-[20px] p-[16px] lg:grid-cols-3 gap-[16px] items-center sm:p-[30px] lg:p-[0px] lg:flex-row lg:gap-[30px] lg:border-[5px] lg:rounded-[20px] border-[#F6F6F6]">
       <ProductShowImage>
         <img
           src={Image1}
@@ -169,7 +169,7 @@ const ProductShow = () => {
         />
       </ProductShowImage>
       {/*  */}
-      <article className="flex flex-col gap-[16px] w-full lg:bg-[#F6F6F6] lg:p-[60px] lg:col-span-2">
+      <article className="flex flex-col gap-[16px] w-full lg:bg-[#F6F6F6] lg:p-[60px] lg:col-span-2 lg:rounded-r-[15px]">
         <ProductShowTitle className="text-[18px] lg:text-[26px] leading-[144.444%] lg:leading-[138.462%]">
           Coffee Beans - Espresso Arabica and Robusta Beans
         </ProductShowTitle>

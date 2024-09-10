@@ -27,7 +27,7 @@ const ProductDetailsBar = () => {
   };
 
   return (
-    <div className="flex flex-col gap-[30px] mx-[20px] lg:bg-[#fff]">
+    <div className="max-w-[1280px] lg:mx-auto flex flex-col gap-[30px] mx-[20px] lg:bg-[#fff]">
       <ul className="flex flex-row gap-[20px]">
         <ProductDetailedText
           onClick={handleClick}

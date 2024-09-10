@@ -753,8 +753,25 @@ video {
   border-radius: 8px;
 }
 
+.rounded-\[\] {
+  border-radius: ;
+}
+
 .border {
   border-width: 1px;
+}
+
+.border-\[1px\] {
+  border-width: 1px;
+}
+
+.border-\[\] {
+  border-color: ;
+}
+
+.border-\[\#F6F6F6\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(246 246 246 / var(--tw-border-opacity));
 }
 
 .bg-\[\#EDEDF6\] {
@@ -996,6 +1013,42 @@ video {
 
   .lg\:gap-\[40px\] {
     gap: 40px;
+  }
+
+  .lg\:rounded-\[20px\] {
+    border-radius: 20px;
+  }
+
+  .lg\:rounded-t-\[20px\] {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .lg\:rounded-r-\[20px\] {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .lg\:rounded-l-\[20px\] {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .lg\:rounded-r-\[15px\] {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .lg\:border-\[1px\] {
+    border-width: 1px;
+  }
+
+  .lg\:border-\[5px\] {
+    border-width: 5px;
+  }
+
+  .lg\:border-\[\] {
+    border-color: ;
   }
 
   .lg\:bg-\[\#EEEEEE\] {
