@@ -570,10 +570,6 @@ video {
   left: -216px;
 }
 
-.left-\[50\%\] {
-  left: 50%;
-}
-
 .right-0 {
   right: 0px;
 }
@@ -584,10 +580,6 @@ video {
 
 .top-\[10px\] {
   top: 10px;
-}
-
-.top-\[50\%\] {
-  top: 50%;
 }
 
 .mx-\[17\.5px\] {
@@ -613,20 +605,20 @@ video {
   margin-bottom: 30px;
 }
 
+.mt-\[12px\] {
+  margin-top: 12px;
+}
+
 .mt-\[20px\] {
   margin-top: 20px;
 }
 
-.mt-\[\] {
-  margin-top: ;
+.mb-\[\] {
+  margin-bottom: ;
 }
 
-.mt-\[5px\] {
-  margin-top: 5px;
-}
-
-.mt-\[12px\] {
-  margin-top: 12px;
+.mb-\[36px\] {
+  margin-bottom: 36px;
 }
 
 .block {
@@ -679,16 +671,6 @@ video {
 
 .flex-1 {
   flex: 1 1 0%;
-}
-
-.translate-x-\[-50\%\] {
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-\[-37\%\] {
-  --tw-translate-y: -37%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
@@ -793,6 +775,10 @@ video {
 .bg-\[\#fff\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\] {
+  background-color: ;
 }
 
 .object-cover {
@@ -915,6 +901,18 @@ video {
   .md\:p-\[40px\] {
     padding: 40px;
   }
+
+  .md\:text-\[18px\] {
+    font-size: 18px;
+  }
+
+  .md\:text-\[20px\] {
+    font-size: 20px;
+  }
+
+  .md\:text-\[\] {
+    color: ;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1020,6 +1018,15 @@ video {
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
+  .lg\:bg-\[\] {
+    background-color: ;
+  }
+
+  .lg\:bg-\[\#FAFAFD\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(250 250 253 / var(--tw-bg-opacity));
+  }
+
   .lg\:p-\[0px\] {
     padding: 0px;
   }
@@ -1068,6 +1075,10 @@ video {
 
   .lg\:leading-\[32px\] {
     line-height: 32px;
+  }
+
+  .lg\:text-\[\] {
+    color: ;
   }
 
   .after\:lg\:right-\[-18px\]::after {

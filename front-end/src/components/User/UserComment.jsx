@@ -10,7 +10,6 @@ const UserCommentContainer = styled.div`
   gap: 2rem;
   padding: 2rem;
   border-radius: 1.6rem;
-  background: #fff;
 `;
 
 const UserCommentAvatar = styled.img`
@@ -44,23 +43,45 @@ const UserCommentReview = styled.span`
 `;
 
 const UserComment = () => {
-  return (
-    <UserCommentContainer>
+  const listComment = [
+    {
+      avatar: Avatar,
+      name: "Jakir Hussen",
+      desc: "Great product, I love this Coffee Beans",
+      star: StarRate,
+      review: "(3.5) Review",
+    },
+    {
+      avatar: Avatar,
+      name: "Jakir Hussen",
+      desc: "Great product, I love this Coffee Beans",
+      star: StarRate,
+      review: "(3.5) Review",
+    },
+    {
+      avatar: Avatar,
+      name: "Jakir Hussen",
+      desc: "Great product, I love this Coffee Beans",
+      star: StarRate,
+      review: "(3.5) Review",
+    },
+  ];
+
+  return Object.values(listComment).map((item, index) => (
+    <UserCommentContainer key={index} className="bg-[#fff] lg:bg-[#FAFAFD]">
       <div className="flex flex-row gap-[20px]">
-        <UserCommentAvatar src={Avatar} alt="avatar" />
+        <UserCommentAvatar src={item.avatar} alt="avatar" />
         <div className="flex flex-col gap-[10px]">
-          <UserCommentName>Jakir Hussen</UserCommentName>
-          <UserCommentDesc>
-            Great product, I love this Coffee Beans{" "}
-          </UserCommentDesc>
+          <UserCommentName>{item.name}</UserCommentName>
+          <UserCommentDesc>{item.desc}</UserCommentDesc>
         </div>
       </div>
       <div className="flex flex-row items-center justify-between">
-        <img src={StarRate} alt="star-rate" />
-        <UserCommentReview>(3.5) Review</UserCommentReview>
+        <img src={item.star} alt="star-rate" />
+        <UserCommentReview>{item.review}</UserCommentReview>
       </div>
     </UserCommentContainer>
-  );
+  ));
 };
 
 export default UserComment;

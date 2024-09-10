@@ -8,7 +8,7 @@ const ProductPage = () => {
   return (
     <div className="bg-[#EDEDF6] lg:bg-[#fff] w-full flex flex-col gap-[20px] lg:gap-[30px]">
       <Header />
-      <div className="flex flex-col gap-[20px] lg:gap-[30px] lg:mx-[20px]">
+      <div className="flex flex-col gap-[20px] lg:gap-[30px] lg:mx-[20px] mb-[36px]">
         <NavBar />
         <ProductShow />
         <ProductDetailsBar />
