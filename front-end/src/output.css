@@ -1063,6 +1063,14 @@ video {
     padding: 40px;
   }
 
+  .md\:p-\[\] {
+    padding: ;
+  }
+
+  .md\:p-\[24px\] {
+    padding: 24px;
+  }
+
   .md\:text-\[18px\] {
     font-size: 18px;
   }

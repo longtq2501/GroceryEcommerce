@@ -44,7 +44,7 @@ const TotalText = styled.span`
 
 const ProductSelectedContainer = () => {
   return (
-    <Container className="p-[16px] bg-[#fff] grid grid-cols-1 gap-[16px] lg:gap-[30px] rounded-[20px] col-span-2">
+    <Container className="p-[16px] lg:p-[30px] md:p-[24px] bg-[#fff] grid grid-cols-1 gap-[16px] lg:gap-[30px] rounded-[20px] col-span-2">
       <ListAddress>
         <AddressItem />
       </ListAddress>
