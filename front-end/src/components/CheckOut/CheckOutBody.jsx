@@ -2,7 +2,8 @@ import React from "react";
 
 const CheckOutBody = (props) => {
   return (
-    <div className="mx-[20px] lg:mx-auto lg:px-[25px] xl:px-[0px]">
+    <div className="mx-[20px] max-w-[1280px] lg:mx-auto xl:px-[0px]
+     grid grid-cols-1 gap-y-[20px] md:gap-[20px] md:grid-cols-3">
       {props.children}
     </div>
   );
