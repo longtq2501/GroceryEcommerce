@@ -6,6 +6,7 @@ import ProductPage from "../pages/Product/ProductPage";
 import Register from "../pages/AuthenticateService/Register/Register";
 import HomeNotLogin from "../pages/Home/HomeNotLogin";
 import CheckOut from "../pages/CheckOut/CheckOut";
+import Shipping from "../pages/Shipping/Shipping";
 
 const RouterProcess = () => {
   return (
@@ -18,6 +19,7 @@ const RouterProcess = () => {
         <Route path="/test" element={<Test />} />
         <Route path="/product-page" element={<ProductPage />} />
         <Route path="/check-out" element={<CheckOut />} />
+        <Route path="/shipping" element={<Shipping />} />
       </Routes>
     </Router>
   );

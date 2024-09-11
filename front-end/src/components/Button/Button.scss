@@ -18,6 +18,14 @@
   font-weight: 500;
   line-height: 144.444%;
 
+  &--border-radius {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 3rem;
+  }
+
   &--secondary {
     background: #fff;
     border: 1px solid #d2d1d6;
