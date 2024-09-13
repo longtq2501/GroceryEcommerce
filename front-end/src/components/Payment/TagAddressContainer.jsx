@@ -20,7 +20,7 @@ const Desc = styled.p`
   font-weight: 400;
 `;
 
-const TagContainer = (props) => {
+const TagAddressContainer = (props) => {
   return (
     <Container className="bg-[#FAFAFD] lg:bg-[#f6f6f6] p-[16px] lg:p-[20px]">
       <div>
@@ -45,4 +45,4 @@ const TagContainer = (props) => {
   );
 };
 
-export default TagContainer;
+export default TagAddressContainer;

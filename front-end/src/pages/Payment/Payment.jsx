@@ -5,8 +5,11 @@ import NavBar from "../../components/NavBar/NavBar";
 import TotalPrice from "../../components/CheckOut/TotalPrice";
 import GiftTag from "../../components/CheckOut/GiftTag";
 import InformationContainer from "../../components/Payment/InformationContainer";
-import TagContainer from "../../components/Payment/TagContainer";
+import TagAddressContainer from "../../components/Payment/TagAddressContainer";
+import TagPayMethodContainer from "../../components/Payment/TagPayMethodContainer";
 import PaymentBody from "../../components/Payment/PaymentBody";
+
+import Brand1 from "../../assets/payment/brand-1.jpg";
 
 const Payment = () => {
   return (
@@ -20,14 +23,20 @@ const Payment = () => {
               title="1. Shipping, arrives between Mon, May 16—Tue, May 24"
               buttonEditor
             >
-              <TagContainer
+              <TagAddressContainer
                 title="Imran Khan"
                 desc="Museum of Rajas, Sylhet Sadar, Sylhet 3100."
                 ticked
               />
-              <TagContainer title="Items details" desc="2 items" detailed />
+              <TagAddressContainer
+                title="Items details"
+                desc="2 items"
+                detailed
+              />
             </InformationContainer>
-            <InformationContainer title="2. Shipping method"></InformationContainer>
+            <InformationContainer title="2. Shipping method">
+              <TagPayMethodContainer />
+            </InformationContainer>
           </div>
           <div className="flex flex-col gap-[20px]">
             <TotalPrice />
