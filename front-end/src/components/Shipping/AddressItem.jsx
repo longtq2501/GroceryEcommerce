@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import EditIcon from "../../assets/shipping/edit-icon.svg";
 import TickedIcon from "../../assets/shipping/ticked-icon.svg";
+import ButtonEdit from "../Button/ButtonEdit";
 
 const Name = styled.h3`
   color: #1a162e;
@@ -17,13 +17,6 @@ const Desc = styled.p`
 const ListStyled = styled.i`
   color: #1a162e;
   font-weight: 500;
-`;
-
-const EditButtonText = styled.span`
-  color: #1a162e;
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 144.444%;
 `;
 
 const AddressItem = (props) => {
@@ -82,10 +75,7 @@ const AddressItem = (props) => {
                 <ListStyled>Shipping</ListStyled>
                 <ListStyled>Delivery from store</ListStyled>
               </ul>
-              <button className="flex flex-row gap-[10px] items-center">
-                <img src={EditIcon} alt="edit-icon" />
-                <EditButtonText>Edit</EditButtonText>
-              </button>
+              <ButtonEdit />
             </div>
           </div>
         </div>

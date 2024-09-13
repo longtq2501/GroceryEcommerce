@@ -21,6 +21,10 @@ const CategoryTitle = styled.h1`
 `;
 
 const Category = (props) => {
+
+
+
+
   return (
     <CategoryContainer className="mx-[20px] lg:mx-auto lg:px-[25px] xl:px-[0px]">
       <CategoryTitleContainer>
