@@ -43,7 +43,7 @@ const Separate = styled.div`
   background: #d2d1d6;
 `;
 
-const TotalPrice = () => {
+const TotalPrice = (props) => {
   const listTotalPrice = [
     {
       subTotal: 3,
@@ -54,7 +54,13 @@ const TotalPrice = () => {
   ];
 
   return (
-    <Container className="p-[16px] md:p-[20px] lg:p-[30px]">
+    <Container
+      className={` ${
+        props.noPaddingContainer
+          ? "p-0 md:p-0 lg:p-0"
+          : "p-[16px] md:p-[20px] lg:p-[30px]"
+      }`}
+    >
       {listTotalPrice.map((item, index) => (
         <div key={index} className="flex flex-col gap-[16px]">
           <Row>

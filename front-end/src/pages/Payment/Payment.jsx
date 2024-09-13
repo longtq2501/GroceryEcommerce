@@ -8,6 +8,7 @@ import InformationContainer from "../../components/Payment/InformationContainer"
 import TagAddressContainer from "../../components/Payment/TagAddressContainer";
 import TagPayMethodContainer from "../../components/Payment/TagPayMethodContainer";
 import PaymentBody from "../../components/Payment/PaymentBody";
+import PaymentForm from "../../components/Payment/PaymentForm";
 
 import Brand1 from "../../assets/payment/brand-1.jpg";
 
@@ -18,7 +19,7 @@ const Payment = () => {
       <div className="flex flex-col gap-[20px] lg:gap-[30px] lg:mx-[20px] mb-[36px]">
         <NavBar backGroundWhite />
         <PaymentBody>
-          <div className="col-span-2 grid gap-[20px]">
+          <div className="col-span-2 grid gap-[20px] h-fit">
             <InformationContainer
               title="1. Shipping, arrives between Mon, May 16—Tue, May 24"
               buttonEditor
@@ -38,9 +39,8 @@ const Payment = () => {
               <TagPayMethodContainer />
             </InformationContainer>
           </div>
-          <div className="flex flex-col gap-[20px]">
-            <TotalPrice />
-            <GiftTag />
+          <div className="flex flex-col gap-[20px] col-span-1">
+           <PaymentForm />
           </div>
         </PaymentBody>
       </div>

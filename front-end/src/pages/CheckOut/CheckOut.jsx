@@ -6,6 +6,7 @@ import TotalPrice from "../../components/CheckOut/TotalPrice";
 import GiftTag from "../../components/CheckOut/GiftTag";
 import ProductSelectedContainer from "../../components/CheckOut/ProductSelectedContainer";
 import CheckOutBody from "../../components/CheckOut/CheckOutBody";
+import PaymentForm from "../../components/Payment/PaymentForm";
 
 const CheckOut = () => {
   return (
@@ -16,8 +17,7 @@ const CheckOut = () => {
         <CheckOutBody>
           <ProductSelectedContainer />
           <div className="flex flex-col gap-[20px]">
-            <TotalPrice />
-            <GiftTag />
+            <PaymentForm />
           </div>
         </CheckOutBody>
       </div>
