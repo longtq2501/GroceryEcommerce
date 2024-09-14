@@ -42,15 +42,19 @@ const TotalText = styled.span`
   line-height: 145.455%;
 `;
 
-const ProductSelectedContainer = () => {
+const ProductSelectedContainer = (props) => {
   return (
     <Container className="p-[16px] lg:p-[30px] md:p-[24px] bg-[#fff] grid grid-cols-1 gap-[16px] lg:gap-[30px] rounded-[20px] col-span-2">
-      <ListAddress>
-        <AddressItem />
-      </ListAddress>
-      <h4 className="text-[18px] leading-[26px] font-[500] text-[#1A162E]">
-        Items Details
-      </h4>
+      {props.address && (
+        <ListAddress>
+          <AddressItem />
+        </ListAddress>
+      )}
+      {props.title && (
+        <h4 className="text-[18px] leading-[26px] font-[500] text-[#1A162E]">
+          Items Details
+        </h4>
+      )}
       <ProductSelected />
       <div className="hidden lg:grid lg:grid-cols-3">
         <div className="flex flex-row items-end col-span-2">

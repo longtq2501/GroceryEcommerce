@@ -192,8 +192,8 @@ const ProductShow = () => {
             </FilterFormSelectContainer>
             <FilterTagContainer>
               {listSize.map((item, index) => (
-                <FilterTag>
-                  <FilterTagText key={index}>{item}</FilterTagText>
+                <FilterTag key={index}>
+                  <FilterTagText>{item}</FilterTagText>
                 </FilterTag>
               ))}
             </FilterTagContainer>

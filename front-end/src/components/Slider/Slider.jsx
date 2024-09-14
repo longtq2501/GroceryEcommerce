@@ -15,7 +15,7 @@ const Slider = () => {
   // console.log(listSlider);
 
   return (
-    <SliderContainer className="mx-[20px] lg:mx-auto lg:px-[25px] xl:px-[0px]">
+    <SliderContainer className="max-w-[1280px] mx-[20px] lg:mx-auto lg:px-[25px] xl:px-[0px]">
       {Object.values(listSlider).map((item, index) => (
         <picture className="w-full object-cover" key={index}>
           <source media="(min-width: 1024px)" srcSet={item.imageBig} />

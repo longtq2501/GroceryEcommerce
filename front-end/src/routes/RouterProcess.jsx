@@ -8,6 +8,7 @@ import HomeNotLogin from "../pages/Home/HomeNotLogin";
 import CheckOut from "../pages/CheckOut/CheckOut";
 import Shipping from "../pages/Shipping/Shipping";
 import Payment from "../pages/Payment/Payment";
+import Profile from "../pages/Profile/Profile";
 
 const RouterProcess = () => {
   return (
@@ -22,6 +23,7 @@ const RouterProcess = () => {
         <Route path="/check-out" element={<CheckOut />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
