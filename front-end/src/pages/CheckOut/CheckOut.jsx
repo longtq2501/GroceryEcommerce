@@ -1,7 +1,6 @@
 import React from "react";
 
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-import Header from "../../layouts/Header/Header";
 import NavBar from "../../components/NavBar/NavBar";
 import TotalPrice from "../../components/CheckOut/TotalPrice";
 import GiftTag from "../../components/CheckOut/GiftTag";

@@ -110,7 +110,8 @@ const Header = () => {
 
   return (
     <header className="lg:bg-[#EEEEEE]">
-      <div className="max-w-[1280px] mx-auto flex flex-row justify-between items-center px-[25px] py-[16px] bg-[#fff] lg:bg-[#EEEEEE] lg:px-[25px] lg:py-[30px] xl:px-[0px]">
+      <div className="max-w-[1280px] mx-auto flex flex-row justify-between 
+      items-center px-[25px] py-[16px] bg-[#fff] lg:bg-[#EEEEEE] lg:px-[25px] lg:py-[30px] xl:px-[0px]">
         <button className="lg:hidden cursor-pointer relative">
           <img src={MenuIcon} alt="menu-icon" onClick={toggleMenu} />
         </button>
@@ -135,7 +136,7 @@ const Header = () => {
               <span>03</span>
             </ActionItem>
 
-            <ActionSeparator></ActionSeparator>
+            <ActionSeparator />
 
             <ActionItem>
               <img src={ShoppingIcon} alt="shopping-icon" />
