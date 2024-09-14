@@ -26,11 +26,7 @@ const AvatarContainer = styled.div`
   gap: 2rem;
   height: 24.6rem;
   border-radius: 2rem 2rem 0rem 0rem;
-  background: linear-gradient(
-    180deg,
-    rgba(26, 22, 46, 0) 0%,
-    #1a162e 100%
-  );
+  background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%);
   box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
 `;
 
@@ -87,7 +83,7 @@ const Icon = styled.img`
 
 const ProfileSideBar = (props) => {
   return (
-    <Container>
+    <Container className="col-span-2">
       <AvatarContainer>
         <img
           alt="icon"
