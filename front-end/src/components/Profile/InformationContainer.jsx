@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import InformationItemWrapper from "./InformationItemWrapper";
 import BankCardContainer from "./BankCardContainer";
+import AccountInfoContainer from "./AccountInfoContainer";
+import ListItemContainer from "./ListItemContainer";
 
 const Container = styled.section`
   border-radius: 2rem;
@@ -18,7 +20,12 @@ const InformationContainer = (props) => {
       <InformationItemWrapper
         title="Account info"
         desc="Addresses, contact information and password"
-      ></InformationItemWrapper>
+      >
+        <AccountInfoContainer />
+      </InformationItemWrapper>
+      <InformationItemWrapper title="Lists" desc="2 items - Primary">
+        <ListItemContainer />
+      </InformationItemWrapper>
     </Container>
   );
 };
