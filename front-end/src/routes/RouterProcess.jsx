@@ -9,6 +9,7 @@ import CheckOut from "../pages/CheckOut/CheckOut";
 import Shipping from "../pages/Shipping/Shipping";
 import Payment from "../pages/Payment/Payment";
 import Profile from "../pages/Profile/Profile";
+import Favorite from "../pages/Favorite/Favorite";
 
 const RouterProcess = () => {
   return (
@@ -24,6 +25,7 @@ const RouterProcess = () => {
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/favorite" element={<Favorite />} />
       </Routes>
     </Router>
   );

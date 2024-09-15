@@ -31,7 +31,7 @@ const NavBar = (props) => {
   return (
     <div
       className={`max-w-[1280px] lg:w-full lg:mx-auto p-[20px] rounded-[20px] bg-[#fff] ${
-        props.backGroundWhite ? "lg:bg-[#fff]" : "lg:bg-[#F6F6F6]"
+        props.bgWhite ? "lg:bg-[#fff]" : "lg:bg-[#F6F6F6]"
       } flex flex-row flex-wrap mx-[20px] gap-[16px] lg:gap-[20px]`}
     >
       {listNav.map((item, index) => (

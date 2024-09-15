@@ -16,7 +16,7 @@
   font-feature-settings: "liga" off, "clig" off;
   font-size: 1.8rem;
   font-weight: 500;
-  line-height: 144.444%;
+  // line-height: 144.444%;
 
   &--border-radius {
     display: flex;
@@ -27,6 +27,7 @@
   }
 
   &--secondary {
+    align-items: center;
     background: #fff;
     border: 1px solid #d2d1d6;
   }
