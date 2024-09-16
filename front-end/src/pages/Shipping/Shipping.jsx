@@ -10,7 +10,7 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 const Shipping = () => {
   return (
     <MainLayout>
-      <NavBar backGroundWhite />
+      <NavBar bgWhite />
       <CheckOutBody>
         <ProductSelectedContainer address title />
         <div className="flex flex-col gap-[20px]">

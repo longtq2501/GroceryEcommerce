@@ -10,7 +10,7 @@ import CheckOutBody from "../../components/CheckOut/CheckOutBody";
 const CheckOut = () => {
   return (
     <MainLayout>
-      <NavBar backGroundWhite />
+      <NavBar bgWhite />
       <CheckOutBody>
         <ProductSelectedContainer />
         <div className="flex flex-col gap-[20px]">

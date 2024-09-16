@@ -4,7 +4,7 @@ import Button from "../../../components/Button/Button.jsx";
 import iconLogo from "../../../assets/authenticate/icon-logo.svg";
 import iconEmail from "../../../assets/authenticate/icon-email.svg";
 import iconPassword from "../../../assets/authenticate/icon-password.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { loginApi } from "../../../services/UserService.jsx";
 import { useNavigate, Link } from "react-router-dom";
 
