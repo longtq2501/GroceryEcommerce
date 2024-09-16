@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /identity
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/tft_identity
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+app:
+  secretKey: "osVkLSCXfUUw5XsgQd8srLAsmaT7j36xxaIlNQzbMHA0cn8rfuzCHYyycloGqjym"

@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-IdentityProjectApplication<identity-project>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.tft_project.identity_project.IdentityProjectApplication",
+      "projectName": "identity-project",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
