@@ -3,7 +3,6 @@ package com.tft_project.identity_project.exception;
 import com.tft_project.identity_project.dto.request.ApiResponse;
 import com.tft_project.identity_project.enums.ErrorCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -19,25 +18,12 @@ public class GlobalHandlingException {
         return ResponseEntity.status(ErrorCode.UNCATEGORIZED.getHttpStatusCode()).body(apiResponse);
     }
 
-    @ExceptionHandler(ApplicationException.class)
-    ResponseEntity<ApiResponse> handlingAppException(ApplicationException exception) {
-        ErrorCode errorCode = exception.getErrorCode();
+    @ExceptionHandler
+    ResponseEntity<ApiResponse> handlingApplicationException(ApplicationException exception) {
         ApiResponse apiResponse = ApiResponse.builder()
-                .code(errorCode.getCode())
-                .message(errorCode.getMessage())
+                .code(exception.getErrorCode().getCode())
+                .message(exception.getErrorCode().getMessage())
                 .build();
-        return ResponseEntity.status(errorCode.getHttpStatusCode()).body(apiResponse);
+        return ResponseEntity.status(exception.getErrorCode().getHttpStatusCode()).body(apiResponse);
     }
-
-    @ExceptionHandler(value = AccessDeniedException.class)
-    ResponseEntity<ApiResponse> handlingAccessDeniedException(AccessDeniedException exception) {
-        ErrorCode errorCode = ErrorCode.USER_NOT_EXISTED;
-
-        return ResponseEntity.status(errorCode.getHttpStatusCode())
-                .body(ApiResponse.builder()
-                        .code(errorCode.getCode())
-                        .message(errorCode.getMessage())
-                        .build());
-    }
-
 }

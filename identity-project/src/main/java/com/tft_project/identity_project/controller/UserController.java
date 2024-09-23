@@ -1,48 +1,45 @@
 package com.tft_project.identity_project.controller;
 
 import com.tft_project.identity_project.dto.request.ApiResponse;
-import com.tft_project.identity_project.dto.request.UserCreateRequest;
-import com.tft_project.identity_project.dto.request.UserUpdateRequest;
+import com.tft_project.identity_project.dto.request.UserRequest;
 import com.tft_project.identity_project.dto.response.UserResponse;
-import com.tft_project.identity_project.service.UserService;
+import com.tft_project.identity_project.services.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 @RequiredArgsConstructor
 @FieldDefaults(level = lombok.AccessLevel.PRIVATE, makeFinal = true)
 public class UserController {
     UserService userService;
 
-    @PostMapping("/create")
-    public ApiResponse<UserResponse> create(@RequestBody UserCreateRequest request) {
+    @GetMapping("/{id}")
+    private ApiResponse<UserResponse> getUser (@PathVariable Integer id) {
         return ApiResponse.<UserResponse>builder()
-                .result(userService.createUser(request))
+                .data(userService.getUser(id))
                 .build();
     }
 
-    @GetMapping("/get-all")
-    ApiResponse<List<UserResponse>> getAllUser() {
-        return ApiResponse.<List<UserResponse>>builder()
-                .result(userService.getAllUsers())
+    @PostMapping
+    private ApiResponse<UserResponse> create (@RequestBody UserRequest request) {
+        return ApiResponse.<UserResponse>builder()
+                .data(userService.createUser(request))
                 .build();
     }
 
-    @PutMapping("/update/{id}")
-    ApiResponse<UserResponse> updateUser(@PathVariable String id ,@RequestBody UserUpdateRequest request) {
+    @PutMapping("update/{id}")
+    private ApiResponse<UserResponse> update (@PathVariable Integer id, @RequestBody UserRequest request) {
         return ApiResponse.<UserResponse>builder()
-                .result(userService.upadateUser(id, request))
+                .data(userService.updateUser(id, request))
                 .build();
     }
 
-    @GetMapping("/get/{id}")
-    ApiResponse<UserResponse> getUser(@PathVariable String id) {
-        return ApiResponse.<UserResponse>builder()
-                .result(userService.getUserById(id))
+    @DeleteMapping("delete/{id}")
+    private ApiResponse<Void> delete (@PathVariable Integer id) {
+        userService.deleteUser(id);
+        return ApiResponse.<Void>builder()
                 .build();
     }
 }

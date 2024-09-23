@@ -1,6 +1,5 @@
 package com.tft_project.identity_project.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,38 +7,30 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
-import java.util.Date;
-import java.util.Set;
-
 @Entity
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @FieldDefaults(level = lombok.AccessLevel.PRIVATE)
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    String id;
-    @Column(name = "first_name")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Integer id;
+    @Column(name = "first_name", nullable = false)
     String firstName;
-    @Column(name = "last_name")
+    @Column(name = "last_name", nullable = false)
     String lastName;
-    @Column(name = "date_of_birth")
-    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
-    Date dob;
-    @Column(name = "sex")
-    String sex;
-    @Column(unique = true, name = "email")
-    String email;
+    @Column(name = "username", nullable = false, unique = true)
+    String username;
+    @Column(name = "password", nullable = false)
+    String password;
     @Column(name = "avatar")
     String avatar;
-    @Column(name = "phone_number")
+    @Column(name = "email", nullable = false, unique = true)
+    String email;
+    @Column(name = "phone_number", unique = true)
     String phoneNumber;
-    @Column(name = "username", unique = true)
-    String username;
-    @Column(name = "password")
-    String password;
-    @ManyToMany(fetch = FetchType.EAGER)
-    Set<Role> roles;
+    @Column(name = "cvv_number")
+    String cvvNumber;
 }
