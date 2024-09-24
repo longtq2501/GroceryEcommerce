@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
+
 @Entity
 @Data
 @Builder
@@ -33,4 +35,13 @@ public class User {
     String phoneNumber;
     @Column(name = "cvv_number")
     String cvvNumber;
+
+    @OneToOne(mappedBy = "user")
+    SavedCategory savedCategory;
+
+    @OneToMany(mappedBy = "user")
+    List<Card> cardList;
+
+    @ManyToOne
+    UserRole userRole;
 }
